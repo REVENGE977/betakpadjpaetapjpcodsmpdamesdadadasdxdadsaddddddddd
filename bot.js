@@ -160,7 +160,7 @@ console.log(`CodyCodes edit`)
 //edit by OrochiX#5426 With ID <429972030092476437>
 
 client.on('message', async message => {  
-    if(message.content.startsWith(prefix + "sharejs")) {      
+    if(message.content.startsWith(prefix + "sharepy")) {      
       await message.channel.send("**:writing_hand: ارسل الكود الان **").then(e => {
       let filter = m => m.author.id === message.author.id
       let lan2 = '';
@@ -185,7 +185,7 @@ client.on('message', async message => {
     b.edit(`**تم النشر بنجاح**`)
           },2000);
   let gg = message.guild.channels.find('name', 'codes-py')
-  if(!gg) return message.reply('لا يوجد روم باسم codes-js')
+  if(!gg) return message.reply('لا يوجد روم باسم codes-py')
   if(gg) {
   gg.send(`
   @everyone | @here 
