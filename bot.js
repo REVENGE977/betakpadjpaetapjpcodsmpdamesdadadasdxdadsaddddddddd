@@ -99,7 +99,6 @@ Sorry. You Got Rejected.**`)
 console.log(`CodyCodes edit`)
 //code by Codes
 //edit by OrochiX#5426 With ID <429972030092476437>
-var prefix = 'A!'
 
 client.on('message', async message => {  
     if(message.content.startsWith(prefix + "sharejs")) {      
