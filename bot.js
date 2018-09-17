@@ -154,5 +154,65 @@ client.on('message', async message => {
     )}
 })
 
+
+console.log(`CodyCodes edit`)
+//code by Codes
+//edit by OrochiX#5426 With ID <429972030092476437>
+
+client.on('message', async message => {  
+    if(message.content.startsWith(prefix + "sharejs")) {      
+      await message.channel.send("**:writing_hand: ارسل الكود الان **").then(e => {
+      let filter = m => m.author.id === message.author.id
+      let lan2 = '';
+      let md2 = '';  
+      let br2 = '';  
+      let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+      .then(collected => {
+        lan2 = collected.first().content
+        collected.first().delete()
+  e.edit(`**:writing_hand: اكتب وصف الكود الان**`)
+  let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
+  .then(co => {  
+    md2 = co.first().content
+          co.first().delete()  
+          e.edit(`**:writing_hand: ارسل المصدر او صانع الكود**`)
+  let br2 = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })    
+  .then(col => {
+    br2 = col.first().content
+          col.first().delete()
+  e.edit("**جاري النشر ...**").then(b => {    
+          setTimeout(() => {
+    b.edit(`**تم النشر بنجاح**`)
+          },2000);
+  let gg = message.guild.channels.find('name', 'codes-py')
+  if(!gg) return message.reply('لا يوجد روم باسم codes-js')
+  if(gg) {
+  gg.send(`
+  @everyone | @here 
+  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  Beta Codes© :arrow_down:
+  ${lan2}
+
+  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  
+  **وصف الكود:** ${md2}
+  **تم النشر بواسطة:** ${message.author.tag} With ID ${message.author.id}
+  **المصدر / الشخص يلي صنع الكود:** ${br2}
+  
+  
+  
+  
+  
+  `)
+  }
+}
+)}
+  )}
+)}
+      )}
+    )}
+})
+
+
   
   client.login(process.env.BOT_TOKEN)
