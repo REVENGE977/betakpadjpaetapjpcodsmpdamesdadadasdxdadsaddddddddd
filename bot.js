@@ -61,4 +61,4 @@ console.log('hello')
   
   
   
-  client.login('NDg4MzczNTI1Mjc5ODAxMzQ0.DoFkIw.7i8VSAnV4Lz2wwRfPyBGO9IXVw8')
+  client.login(process.env.BOT_TOKEN)
